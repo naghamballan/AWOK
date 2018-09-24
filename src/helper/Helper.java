@@ -4,13 +4,22 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
+import bsh.TargetError;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -49,7 +58,7 @@ public class Helper {
 	
 	// tutorial page function: next and done
 	public static void tutorial_page_done()
-{
+	{
 		
 		button_click_id(Locators.id_tutorial_next_button);
 		button_click_id(Locators.id_tutorial_next_button);
@@ -60,7 +69,7 @@ public class Helper {
 	
 	// tutorial page function: skip
 	public static void tutorial_page_skip()
-{
+	{
 	
 		//button_click_id(Locators.id_tutorial_skip_button);
 		
@@ -109,7 +118,6 @@ public class Helper {
 	//click with ui id
 	public static void button_click_ui_id(String value)
 	{
-		
 		driver.findElementByAndroidUIAutomator(value).click();
 	}
 	
@@ -134,6 +142,11 @@ public class Helper {
 		((AppiumDriver)driver).scrollTo(value);
 	}
 	
+	//scroll to text using android driver
+	public static void scroll_to_text2(String value)
+	{
+		driver.scrollTo(value);
+	}
 	//click on Hamburger menu
 	public static void open_Hamburger_menu()
 	{
@@ -247,7 +260,6 @@ public class Helper {
 	
 	}
 
-	
 	//hide keyboard function
 	public static void hide_keyboard()
 	{
@@ -272,4 +284,18 @@ public class Helper {
 		button_click_id(Locators.alert_no);
 	}
 	
+	//get all child elements from parent by id
+	public static List<WebElement> get_elements_by_id(String source, String target)
+	{
+		List<WebElement> elements = Helper.driver.findElementById(source).findElements(By.id(target)); // get all wanted elements in the view	
+		return elements;
+	}
+	
+	//get all child elements from parent by class names
+	public static List<WebElement> get_elements_by_class(String source, String target)
+	{
+		List<WebElement> elements = Helper.driver.findElementById(source).findElements(By.className(target)); // get all wanted elements in the view	
+		return elements;
+	}
+
 }

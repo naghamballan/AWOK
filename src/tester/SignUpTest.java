@@ -1,11 +1,23 @@
 package tester;
 
+import java.net.MalformedURLException;
+
+import org.testng.annotations.Test;
+
 import helper.Helper;
 import helper.Locators;
 
 public class SignUpTest {
 
-	
+	@Test(priority=0,description="signup and login test cases")
+	public static void test_case_luncher() throws MalformedURLException, InterruptedException
+	{
+		Helper.app_luncher();
+		Helper.tutorial_page_done();
+		Helper.country_language_page();
+		signup_page_test_cases();	
+		
+	}
 	public static void signup_page_test_cases() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu(); // open Hamburger menu
@@ -13,7 +25,7 @@ public class SignUpTest {
 		Helper.button_click_id(Locators.signup_text);// click on sign up text field
 		Helper.sleep();
 		
-		//signup_with_invalid_credentials(); // 1st test case, invalid cred signup
+		signup_with_invalid_credentials(); // 1st test case, invalid cred signup
 		
 		already_have_account(); // go to login page
 		
@@ -30,12 +42,12 @@ public class SignUpTest {
 		
 		already_have_account(); // go to login page again
 		
-		login_with_Facebook(); // 6th test case
+		login_with_Facebook(); // 4th test case
 		Helper.navigate_back();
 		
-		login_with_invalid_credentials(); // 4th test case
+		login_with_invalid_credentials(); // 5th test case
 		
-		open_signup_page_from_login_page(); //5th test case
+		open_signup_page_from_login_page(); //6th test case
 		
 		already_have_account(); // go to login page again
 				
