@@ -64,7 +64,7 @@ public class Helper {
 		button_click_id(Locators.id_tutorial_next_button);
 		button_click_id(Locators.id_tutorial_next_button);
 		button_click_id(Locators.id_tutorial_done_button); 		//click on done button
-		
+		Reporter.log("Tutorila Page is browsed",true);
 	}
 	
 	// tutorial page function: skip
@@ -76,10 +76,12 @@ public class Helper {
 	}
 	
 	// select country and language in fresh install
-	public static void country_language_page()
+	public static void country_language_page() throws InterruptedException
 	{
 		// keep all as default English/ UAE
+		sleep();
 		button_click_id(Locators.done_language_country_selection);
+		Reporter.log("select country and language",true);
 	}
 	
 	//set desired language
@@ -97,14 +99,17 @@ public class Helper {
 	}
 	
 	// logout function from hamburger menu 
-	public static void logout()
+	public static void logout() throws InterruptedException
 {
 		
 		scroll_to_text("Logout");
-		console_print("Scrolled");
+		console_print("will make logout now");
+		sleep();
 		button_click_ui_id(Locators.ui_logout);
 		button_click_id(Locators.logout_button);
 		console_print("I am Logged out");
+		sleep();
+		Reporter.log("User is logged out now",true);
 		
 	}
 	

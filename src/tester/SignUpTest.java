@@ -2,6 +2,7 @@ package tester;
 
 import java.net.MalformedURLException;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import helper.Helper;
@@ -33,12 +34,14 @@ public class SignUpTest {
 		
 		Helper.navigate_back(); // go to hamburger menu again
 		Helper.sleep();
+		Helper.sleep();
 		System.out.println("in home page with Hampurger menu");
+		Helper.sleep();
 		Helper.button_click_id(Locators.signup_text);// click on sign up text field
 		Helper.sleep();
 		
-		//signup_with_Facebook_Account(); // 3rd test case
-		//Helper.navigate_back();
+		signup_with_Facebook_Account(); // 3rd test case
+		Helper.navigate_back();
 		
 		already_have_account(); // go to login page again
 		
@@ -48,11 +51,12 @@ public class SignUpTest {
 		login_with_invalid_credentials(); // 5th test case
 		
 		open_signup_page_from_login_page(); //6th test case
+
 		
 		already_have_account(); // go to login page again
 				
 		login_with_valid_credentials(); // 7th test case
-		
+
 		Helper.logout(); // logout
 	}
 
@@ -62,6 +66,7 @@ public class SignUpTest {
 		Helper.sleep();
 		Helper.console_print("login with Facebook Account test case is passed");
 		Helper.sleep();
+		Reporter.log("Login with Facebook test case is passed",true);
 	}
 
 	private static void open_signup_page_from_login_page() throws InterruptedException 
@@ -71,6 +76,7 @@ public class SignUpTest {
 		Helper.sleep();
 		Helper.console_print("open signup page from login page test case is passed");
 		Helper.sleep();
+		Reporter.log("Open signup page from login page test case is passed",true);
 		
 	}
 
@@ -97,6 +103,7 @@ public class SignUpTest {
 		Helper.console_print(result); // print the result
 		Helper.console_print("Signup with invalid credentials test case is passed");
 		Helper.sleep();
+		Reporter.log("Signup with invalid credentials test case is passed",true);
 	
 	}
 
@@ -106,6 +113,8 @@ public class SignUpTest {
 		Helper.sleep();
 		Helper.console_print("we are in login page");
 		Helper.sleep();
+		Helper.sleep();
+		Reporter.log("already have account clicked",true);
 	}
 	
 	private static void forget_login_password() throws InterruptedException
@@ -129,6 +138,7 @@ public class SignUpTest {
 		Helper.sleep();
 		Helper.navigate_back(); // dismiss the forget password dialog
 		Helper.sleep();
+		Reporter.log("forget login password test case is passed",true);
 	}
 	
 	private static void signup_with_Facebook_Account() throws InterruptedException
@@ -137,6 +147,7 @@ public class SignUpTest {
 		Helper.sleep();
 		Helper.console_print("signup with Facebook Account test case is passed");
 		Helper.sleep();
+		Reporter.log("signup with Facebook Account test case is passed",true);
 	}
 	
 	private static void login_with_invalid_credentials() throws InterruptedException 
@@ -157,12 +168,13 @@ public class SignUpTest {
 		Helper.console_print(result); // print the result
 		Helper.console_print("login with invalid credentials test case is passed");
 		Helper.sleep();
+		Reporter.log("login with invalid credentials test case is passed",true);
 	}
 
 	private static void login_with_valid_credentials() throws InterruptedException 
 	{
-		String username="rachel@gmail.com";
-		String password="rachel";
+		String username="themetest@awok.co";
+		String password="123456";
 		
 		Helper.sendkeys_id(Locators.login_email_text, username); // enter user name
 		Helper.sendkeys_id(Locators.login_password, password); // enter password
@@ -173,6 +185,8 @@ public class SignUpTest {
 		Helper.dismiss_alert(); // press no on system alert dialog
 		Helper.sleep();
 		Helper.console_print("login with valid credentials test case is passed");
+		Helper.sleep();
+		Reporter.log("ogin with valid credentials test case is passed",true);
 	}
 
 }

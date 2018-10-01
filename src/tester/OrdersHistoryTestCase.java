@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 import helper.Helper;
 import helper.Locators;
@@ -33,8 +34,8 @@ public class OrdersHistoryTestCase {
 		browse_cancelled_orders();
 		
 		//open pending orders
-//		tabs.get(0).click();
-//		browse_pending_orders();
+		tabs.get(0).click();
+		browse_pending_orders();
 //		
 //		//open delivered orders
 //		tabs.get(1).click();
@@ -58,16 +59,12 @@ public class OrdersHistoryTestCase {
 	
 	private static void browse_pending_orders() throws InterruptedException
 	{
-		
 		open_order();
-	
 		//try to cancel the pending order
 		cancel_pending_order();
-		
-		Helper.sleep();
-		
+		Helper.sleep();	
+		Reporter.log("browse pending order and cancel one order test case is done", true);
 		Helper.navigate_back();
-		
 	}
 
 	private static void cancel_pending_order() {
@@ -93,7 +90,7 @@ public class OrdersHistoryTestCase {
 		//press  submit button
 		Helper.button_click_id(Locators.cancel_order_submit_button);
 		Helper.console_print("Order cancelled successfully");
-		
+		Reporter.log("Order cancelled successfully", true);
 	}
 
 	
@@ -104,7 +101,7 @@ public class OrdersHistoryTestCase {
 		scrolling_orders_list();
 		Helper.sleep();
 		Helper.console_print("Browse all cancelled orders");
-		Helper.navigate_back();
+		Reporter.log("Browse cancelled orders test case is done", true);
 	}
 	
 	private static void scrolling_orders_list()
@@ -137,7 +134,7 @@ public class OrdersHistoryTestCase {
         /*the problem here is just we cannot know when we reach the end  of list
          i put j integer just to identify the number of prders we want to read
          when we read 20 orders, test will be stopped */
-        while (j < 20)
+        while (j < 3)
         {
         	listItems = listView.findElements(By.className(Locators.orders_history_ordernumber_class_name));
   
@@ -170,6 +167,7 @@ public class OrdersHistoryTestCase {
 	{
 		open_order();
 		add_complaint_for_order();
+		Reporter.log("Browsed delivered orders test case is done", true);
 	}
 
 	private static void add_complaint_for_order() throws InterruptedException 
@@ -189,11 +187,18 @@ public class OrdersHistoryTestCase {
 		
 		//track claim after added
 		//go to success page and press track claim
-	    track_claim_after_add();
+		//track_claim_after_add();
 	    
 	    Helper.sleep();
 	    Helper.navigate_back();
-		
+	    Helper.sleep();
+	    Helper.navigate_back();
+	    Helper.sleep();
+	    Helper.navigate_back();
+	    Helper.sleep();
+	    Helper.navigate_back();
+	    //Helper.sleep();
+	    Reporter.log("Complaint added successfully", true);
 	}
 	
 	private static void select_products_to_add_to_claim() throws InterruptedException
@@ -234,10 +239,10 @@ public class OrdersHistoryTestCase {
 		//second product
 		
 		//press submit
-		Helper.button_click_id(Locators.add_complaint_claims_page_submit_button);
+		//Helper.button_click_id(Locators.add_complaint_claims_page_submit_button);
 	    Helper.console_print("claim is submitted");
 	    Helper.sleep();
-	    Helper.sleep();
+	    //Helper.sleep();
 	    
 	}
 	

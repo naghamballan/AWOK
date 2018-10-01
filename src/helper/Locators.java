@@ -83,10 +83,10 @@ public class Locators {
 	public static String new_address_ui_country="";
 	
 	public static String new_address_ui_emirate="new UiSelector().text(\"Emirate *\")";
-	public static String new_address_data_emirate="new UiSelector().text(\"Dubai\")";
+	public static String new_address_data_emirate="new UiSelector().text(\"Abu Dhabi\")";
 	
 	public static String new_address_ui_area="new UiSelector().text(\"Area *\")";
-	public static String new_address_data_area="new UiSelector().text(\"Al Bada\")";
+	public static String new_address_data_area="new UiSelector().text(\"Al Bahia\")";
 	
 	public static String new_address_ui_street_flat="new UiSelector().text(\"Street, Apt No, Floor No. Villa No. etc *\")";
 	

@@ -18,25 +18,26 @@ public class MyAddressesTestCase {
 		Helper.sleep();
 		
 		// add new address
-		//add_new_address();
-		//Helper.sleep();
+//		add_new_address();
+//		Helper.sleep();
 		
 		// update address
 		update_address();
 		Helper.sleep();
 
 		// delete address
-		//delete_address();
-		//Helper.sleep();
+//		delete_address();
+//		Helper.sleep();
 		
 		// make address primary			
-		//make_address_primary();
-		//Helper.sleep();
+//		make_address_primary();
+//		Helper.sleep();
 	}
 	
 	@SuppressWarnings("unused")
 	private static void make_address_primary()
 	{
+		Helper.console_print("Making address primary");
 		make_address_primary(2);
 		Helper.console_print("Address is primary now");
 	}
@@ -50,7 +51,10 @@ public class MyAddressesTestCase {
 	}
 		
 	@SuppressWarnings("unused")
-	private static void add_new_address() throws InterruptedException {
+	private static void add_new_address() throws InterruptedException
+	{
+		
+		Helper.console_print("Adding new addresss");
 		
 		Helper.button_click_id(Locators.address_add_button);//press add new address button
 		Helper.navigate_back();// back to my addresses page and open add new address using + icon
@@ -83,25 +87,28 @@ public class MyAddressesTestCase {
 	@SuppressWarnings("unused")
 	private static void delete_address()
 	{
+		Helper.console_print("Delete address");
 		delete_address_by_x_button(1);
 		Helper.console_print("Item is successfully deleted");
 	}
 	
 	// delete address from my addresses page
 	public static void delete_address_by_x_button(int index)
-		{
-			WebElement target_address = addressesListItem(index,Locators.address_remove_item); // get the address to delete
+	{
+		
+		WebElement target_address = addressesListItem(index,Locators.address_remove_item); // get the address to delete
 			
-			target_address.click();//delete the address
-		}
+		target_address.click();//delete the address
+	}
 			
 	private static void update_address() throws InterruptedException
 	{
+		Helper.console_print("Updating address");
+		
 		//open the address that u want to update
 		select_address_to_update(2);
 		
-		// this method is not compatible with this java version so now we can not use it 
-		//edit_address_details();
+		edit_address_details();
 		Helper.sleep();
 	
 		// save the changes
@@ -111,20 +118,18 @@ public class MyAddressesTestCase {
 	//editing action: but crashing, not working
 	public static void edit_address_details() throws InterruptedException
 	{
-		WebElement target_item = edit_address_Items(2);
-		
-		Helper.console_print("value is returned");
+		WebElement target_item = edit_address_Items(3);
 		Helper.sleep();	
+//		
+//		target_item.click();
+//		Helper.console_print("clicked");
+//		Helper.sleep();
+//		
+//		target_item.clear();
+//		Helper.console_print("cleared");
 		
-		target_item.click();
-		Helper.console_print("clicked");
-		Helper.sleep();
-		
-		target_item.clear();
-		Helper.console_print("cleared");
-		
-	    target_item.sendKeys(new String[]{"0523341123"});
-	    Helper.sleep();
+//	    target_item.sendKeys("city center");
+//	    Helper.sleep();
 	    Helper.console_print("edit address details successfully");
 	}
 
@@ -153,8 +158,7 @@ public class MyAddressesTestCase {
 		// get all wanted elements in the view
 		List<WebElement> elements =   
 				Helper.get_elements_by_id(Locators.edit_address_layout, Locators.edit_address_edit_text); 
-		//Helper.driver.findElementById(Locators.edit_address_layout).
-		//findElements(By.id(Locators.edit_address_edit_text));
+
 		int size = 0;
 		int j = 0;
 		
@@ -162,15 +166,12 @@ public class MyAddressesTestCase {
 		size += elements.size();
 		
 		for(int i=0; i<size; i++){
-			//console_print(elements.get(i).getText());
 			if(elements.get(i).isEnabled()){
 				enabled_elements.add(j,elements.get(i));
-				Helper.console_print(enabled_elements.get(j).getText());
+				//Helper.console_print(enabled_elements.get(j).getText());
 				j++;
 			}
 		}
-	
-		Helper.console_print("value will be returned");
 		return enabled_elements.get(index); // 0 for emirate, 1 for area, 2 for details
 	}
 }

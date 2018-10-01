@@ -78,8 +78,9 @@ public class MyCouponsTestCase {
 		else
 			Helper.console_print("wrong values");
 	
-		Helper.sleep();
 		
+		Helper.console_print("Coupon will be removed");
+		Helper.sleep();
 		//remove the coupon
 		Helper.button_click_id(Locators.shopping_cart_remove_applied_coupon_button);
 		Helper.sleep();

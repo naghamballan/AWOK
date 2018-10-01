@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+    <line>
+      <![CDATA[App installed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Tutorila Page is browsed]]>
+    </line>
+    <line>
+      <![CDATA[select country and language]]>
+    </line>
+    <line>
+      <![CDATA[Update profile test case is done]]>
+    </line>
+    <line>
+      <![CDATA[All My Addresses test cases are done]]>
+    </line>
+    <line>
+      <![CDATA[Browse cancelled orders test case is done]]>
+    </line>
+    <line>
+      <![CDATA[Order cancelled successfully]]>
+    </line>
+    <line>
+      <![CDATA[browse pending order and cancel one order test case is done]]>
+    </line>
+    <line>
+      <![CDATA[All Orders History test cases are done]]>
+    </line>
+    <line>
+      <![CDATA[All My Coupons test cases are done]]>
+    </line>
+    <line>
+      <![CDATA[All settings test cases are done]]>
+    </line>
+    <line>
+      <![CDATA[All terms of services test cases are done]]>
+    </line>
+    <line>
+      <![CDATA[All cutomer support test cases are done]]>
+    </line>
+    <line>
+      <![CDATA[All Privacy Policy test cases are done]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="322804" started-at="2018-09-25T11:54:49Z" finished-at="2018-09-25T12:00:12Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="322804" started-at="2018-09-25T11:54:49Z" finished-at="2018-09-25T12:00:12Z">
+      <class name="tester.Hamburger_menu_selection">
+        <test-method status="FAIL" signature="test_case_luncher()[pri:0, instance:tester.Hamburger_menu_selection@4678c730]" name="test_case_luncher" duration-ms="322732" started-at="2018-09-25T11:54:49Z" description="Hamburger menu options" finished-at="2018-09-25T12:00:12Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
+System info: host: 'LE-17691', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_60'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=F:\Appium\workspace\AWOK_auto_test\src\14318.apk, networkConnectionEnabled=true, warnings={}, autoDismissAlerts=true, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, desired={app=F:\Appium\workspace\AWOK_auto_test\src\14318.apk, newCommandTimeout=45000, browserName=, autoDismissAlerts=true, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=45000, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 19f75e19-68bd-4be2-b9e1-8f23c82deecc
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text("About Us")}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
+System info: host: 'LE-17691', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_60'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=F:\Appium\workspace\AWOK_auto_test\src\14318.apk, networkConnectionEnabled=true, warnings={}, autoDismissAlerts=true, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, desired={app=F:\Appium\workspace\AWOK_auto_test\src\14318.apk, newCommandTimeout=45000, browserName=, autoDismissAlerts=true, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=45000, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 19f75e19-68bd-4be2-b9e1-8f23c82deecc
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text("About Us")}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:244)
+at helper.Helper.button_click_ui_id(Helper.java:126)
+at tester.Hamburger_menu_selection.about_us(Hamburger_menu_selection.java:157)
+at tester.Hamburger_menu_selection.test_case_luncher(Hamburger_menu_selection.java:50)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[App installed successfully]]>
+            </line>
+            <line>
+              <![CDATA[Tutorila Page is browsed]]>
+            </line>
+            <line>
+              <![CDATA[select country and language]]>
+            </line>
+            <line>
+              <![CDATA[Update profile test case is done]]>
+            </line>
+            <line>
+              <![CDATA[All My Addresses test cases are done]]>
+            </line>
+            <line>
+              <![CDATA[Browse cancelled orders test case is done]]>
+            </line>
+            <line>
+              <![CDATA[Order cancelled successfully]]>
+            </line>
+            <line>
+              <![CDATA[browse pending order and cancel one order test case is done]]>
+            </line>
+            <line>
+              <![CDATA[All Orders History test cases are done]]>
+            </line>
+            <line>
+              <![CDATA[All My Coupons test cases are done]]>
+            </line>
+            <line>
+              <![CDATA[All settings test cases are done]]>
+            </line>
+            <line>
+              <![CDATA[All terms of services test cases are done]]>
+            </line>
+            <line>
+              <![CDATA[All cutomer support test cases are done]]>
+            </line>
+            <line>
+              <![CDATA[All Privacy Policy test cases are done]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test_case_luncher -->
+      </class> <!-- tester.Hamburger_menu_selection -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

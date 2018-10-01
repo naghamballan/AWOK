@@ -2,6 +2,7 @@ package tester;
 
 import java.net.MalformedURLException;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import helper.Helper;
@@ -21,19 +22,34 @@ public class Hamburger_menu_selection{
 		login_with_valid_credentials();
 		
 		/*Test Cases calls*/
+		Helper.console_print("My profile test case");
+		my_profile();
 		
-		//my_profile();
-		//my_addresses();
+		Helper.console_print("My address test case");
+		my_addresses();
+		
+		Helper.console_print("Order History test case");
 		OrdersHistory();
-	//	myCoupons();
-//		settings();
-//		terms_of_services();
-//		customer_support();
-//		privacy_policy();
-//		about_us();
+		
+		Helper.console_print("My Coupons test case");
+		myCoupons();
+		
+		Helper.console_print("Setting test case");
+		settings();
+		
+		Helper.console_print("Term of services test case");
+		terms_of_services();
+		
+		Helper.console_print("Customer Support test case");
+		customer_support();
+		
+		Helper.console_print("Privacy policy test case");
+		privacy_policy();
+		
+		Helper.console_print("About Us test case");
+		about_us();
 		
 	}
-
 
 	private static void login_with_valid_credentials() throws InterruptedException 
 	{
@@ -56,17 +72,16 @@ public class Hamburger_menu_selection{
 		Helper.console_print("login with valid credentials");
 	}
 
-    @SuppressWarnings("unused")
 	private static void my_profile() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
 		
 		MyProfieTestCase.test_case_luncher();
-		Helper.navigate_back();
+		Reporter.log("Update profile test case is done", true);
+		//Helper.navigate_back();
 	}
     
-	@SuppressWarnings("unused")
 	private static void my_addresses() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
@@ -74,6 +89,7 @@ public class Hamburger_menu_selection{
 		
 		MyAddressesTestCase.test_case_luncher();
 		Helper.navigate_back();
+		Reporter.log("All My Addresses test cases are done", true);
 	}
 
 	private static void OrdersHistory() throws InterruptedException
@@ -83,17 +99,28 @@ public class Hamburger_menu_selection{
 		
 		OrdersHistoryTestCase.test_case_luncher();
 		Helper.navigate_back();
+		Reporter.log("All Orders History test cases are done", true);
 	}
+
+    private static void myCoupons() throws InterruptedException
+    {
+		Helper.open_Hamburger_menu();//open the hamburger menu
+		Helper.sleep();
 	
+		MyCouponsTestCase.test_case_luncher();
+		Helper.navigate_back();
+		Reporter.log("All My Coupons test cases are done", true);
+	}
+	   
 	private static void customer_support() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
 		
-		//Helper.scroll_to_text2("Settings");
 		Helper.button_click_ui_id(Locators.ui_customer_support);// select customer support
 		Helper.sleep();
 		Helper.navigate_back();
+		Reporter.log("All cutomer support test cases are done", true);
 	}
 	
 	private static void settings() throws InterruptedException
@@ -108,6 +135,7 @@ public class Hamburger_menu_selection{
 		Helper.sleep();
 		
 		Helper.navigate_back();
+		Reporter.log("All settings test cases are done", true);
 	}
 	
 	private static void terms_of_services() throws InterruptedException
@@ -115,21 +143,21 @@ public class Hamburger_menu_selection{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
 		
-		//Helper.scroll_to_text2("Terms of Services");
 		Helper.button_click_ui_id(Locators.ui_terms_of_services);// select terms_of_services
 		Helper.sleep();
 		Helper.navigate_back();
+		Reporter.log("All terms of services test cases are done", true);
 	}
 	
 	private static void about_us() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
-		
-		//Helper.scroll_to_text2("Settings");
+
 		Helper.button_click_ui_id(Locators.ui_About_us);// select about_us
 		Helper.sleep();
 		Helper.navigate_back();
+		Reporter.log("All About US test cases are done", true);
 	}
 	
 	private static void privacy_policy() throws InterruptedException
@@ -137,21 +165,11 @@ public class Hamburger_menu_selection{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
 		
-	//	Helper.scroll_to_text2("Settings");
 		Helper.button_click_ui_id(Locators.ui_privacy_policy);// select privacy_policy
 		Helper.sleep();
 		Helper.navigate_back();
+		Reporter.log("All Privacy Policy test cases are done", true);
 	}
-	
 
-    private static void myCoupons() throws InterruptedException
-    {
-		Helper.open_Hamburger_menu();//open the hamburger menu
-		Helper.sleep();
-	
-		MyCouponsTestCase.test_case_luncher();
-	
-		Helper.navigate_back();
-	}
 	
 }
