@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\nagham\AppData\Local\Temp\testng-eclipse-833114755\testng-customsuite.xml</span>
+                    <span>C:\Users\srikanth.m\AppData\Local\Temp\testng-eclipse-77888355\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tester.Hamburger_menu_selection" hash-for-method="test_case_luncher">test_case_luncher</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tester.NEW_Hamburger_menu_selection_" hash-for-method="test_case_luncher">test_case_luncher</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,7 +120,7 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tester.Hamburger_menu_selection</span>
+              <span class="class-name">tester.NEW_Hamburger_menu_selection_</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -129,14 +129,14 @@
                   </a> <!-- test_case_luncher -->
                   <span class="method-name">test_case_luncher</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.55 seconds
+Command duration or timeout: 103 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
-System info: host: &apos;LE-17691&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_60&apos;
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
+System info: host: &apos;AWLP1697600-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{app=F:\Appium\workspace\AWOK_auto_test\src\14318.apk, networkConnectionEnabled=true, warnings={}, autoDismissAlerts=true, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, desired={app=F:\Appium\workspace\AWOK_auto_test\src\14318.apk, newCommandTimeout=45000, browserName=, autoDismissAlerts=true, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=45000, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
-Session ID: 19f75e19-68bd-4be2-b9e1-8f23c82deecc
-*** Element info: {Using=-android uiautomator, value=new UiSelector().text(&quot;About Us&quot;)}
+Capabilities [{app=D:\git\AWOK_auto_test.git\src\100918.apk, networkConnectionEnabled=true, warnings={}, autoDismissAlerts=true, databaseEnabled=false, deviceName=192.168.224.101:5555, platform=LINUX, desired={app=D:\git\AWOK_auto_test.git\src\100918.apk, newCommandTimeout=45000, browserName=, autoDismissAlerts=true, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=45000, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: faf02225-1c37-461a-89ac-70dcfba67d7f
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text(&quot;Terms of Service&quot;)}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -144,12 +144,17 @@ Session ID: 19f75e19-68bd-4be2-b9e1-8f23c82deecc
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:244)
-	at helper.Helper.button_click_ui_id(Helper.java:126)
-	at tester.Hamburger_menu_selection.about_us(Hamburger_menu_selection.java:157)
-	at tester.Hamburger_menu_selection.test_case_luncher(Hamburger_menu_selection.java:50)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:365)
+	at helper.Helper.button_click_ui_id(Helper.java:131)
+	at tester.NEW_Hamburger_menu_selection_.terms_of_services(NEW_Hamburger_menu_selection_.java:171)
+	at tester.NEW_Hamburger_menu_selection_.test_case_luncher(NEW_Hamburger_menu_selection_.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -186,7 +191,7 @@ Session ID: 19f75e19-68bd-4be2-b9e1-8f23c82deecc
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nagham\AppData\Local\Temp\testng-eclipse-833114755\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\srikanth.m\AppData\Local\Temp\testng-eclipse-77888355\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,7 +200,7 @@ Session ID: 19f75e19-68bd-4be2-b9e1-8f23c82deecc
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tester.Hamburger_menu_selection&quot;/&gt;
+      &lt;class name=&quot;tester.NEW_Hamburger_menu_selection_&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -238,13 +243,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test_case_luncher')
-data.setCell(0, 2, 'tester.Hamburger_menu_selection')
-data.setCell(0, 3, 322732);
+data.setCell(0, 2, 'tester.NEW_Hamburger_menu_selection_')
+data.setCell(0, 3, 39303);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -261,17 +266,7 @@ return data;
                 <span class="reporter-method-output">App installed successfully</span>
                 <span class="reporter-method-output">Tutorila Page is browsed</span>
                 <span class="reporter-method-output">select country and language</span>
-                <span class="reporter-method-output">Update profile test case is done</span>
-                <span class="reporter-method-output">All My Addresses test cases are done</span>
-                <span class="reporter-method-output">Browse cancelled orders test case is done</span>
-                <span class="reporter-method-output">Order cancelled successfully</span>
-                <span class="reporter-method-output">browse pending order and cancel one order test case is done</span>
-                <span class="reporter-method-output">All Orders History test cases are done</span>
-                <span class="reporter-method-output">All My Coupons test cases are done</span>
                 <span class="reporter-method-output">All settings test cases are done</span>
-                <span class="reporter-method-output">All terms of services test cases are done</span>
-                <span class="reporter-method-output">All cutomer support test cases are done</span>
-                <span class="reporter-method-output">All Privacy Policy test cases are done</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -289,7 +284,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tester.Hamburger_menu_selection</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tester.NEW_Hamburger_menu_selection_</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>

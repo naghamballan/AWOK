@@ -36,7 +36,7 @@ public class Helper {
 			File appdir=new File("src");
 	
 		//getting apk from src
-			File app =new File(appdir,"14318.apk");
+			File app =new File(appdir,"100918.apk");
 	
 		//creating desired capabilities
 			DesiredCapabilities cap=new DesiredCapabilities();
@@ -84,6 +84,11 @@ public class Helper {
 		Reporter.log("select country and language",true);
 	}
 	
+	public static void my_account_page()
+	{
+		button_click_ui_id(Locators.my_account);
+		Reporter.log("My account page is opened",true);
+	}
 	//set desired language
 	public static void language_setter(String value)
 	{
@@ -144,13 +149,13 @@ public class Helper {
 	//scroll to function
 	public static void scroll_to_text(String value){
 		
-		((AppiumDriver)driver).scrollTo(value);
+		//((AppiumDriver)driver).scrollTo(value);
 	}
 	
 	//scroll to text using android driver
 	public static void scroll_to_text2(String value)
 	{
-		driver.scrollTo(value);
+		//driver.scrollTo(value);
 	}
 	//click on Hamburger menu
 	public static void open_Hamburger_menu()

@@ -15,6 +15,8 @@ public class Hamburger_menu_selection{
 	{
 		Helper.app_luncher();
 		
+		Thread.sleep(5000);
+		
 		Helper.tutorial_page_done();
 		
 		Helper.country_language_page();
@@ -23,13 +25,13 @@ public class Hamburger_menu_selection{
 		
 		/*Test Cases calls*/
 		Helper.console_print("My profile test case");
-		my_profile();
+		//my_profile();
 		
 		Helper.console_print("My address test case");
-		my_addresses();
+		//my_addresses();
 		
 		Helper.console_print("Order History test case");
-		OrdersHistory();
+		//OrdersHistory();
 		
 		Helper.console_print("My Coupons test case");
 		myCoupons();
@@ -67,12 +69,12 @@ public class Hamburger_menu_selection{
 		Helper.sleep();
 		Helper.button_click_id(Locators.login_button); // press login button
 		Helper.sleep();
-		Helper.dismiss_alert(); // press no on system alert dialog
+		//Helper.dismiss_alert(); // press no on system alert dialog
 		Helper.sleep();
 		Helper.console_print("login with valid credentials");
 	}
 
-	private static void my_profile() throws InterruptedException
+/*	private static void my_profile() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
@@ -80,19 +82,20 @@ public class Hamburger_menu_selection{
 		MyProfieTestCase.test_case_luncher();
 		Reporter.log("Update profile test case is done", true);
 		//Helper.navigate_back();
-	}
+	}*/
     
-	private static void my_addresses() throws InterruptedException
+/*	private static void my_addresses() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
 		
 		MyAddressesTestCase.test_case_luncher();
+		Helper.sleep();
 		Helper.navigate_back();
 		Reporter.log("All My Addresses test cases are done", true);
-	}
+	}*/
 
-	private static void OrdersHistory() throws InterruptedException
+	/*private static void OrdersHistory() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
@@ -101,7 +104,7 @@ public class Hamburger_menu_selection{
 		Helper.navigate_back();
 		Reporter.log("All Orders History test cases are done", true);
 	}
-
+*/
     private static void myCoupons() throws InterruptedException
     {
 		Helper.open_Hamburger_menu();//open the hamburger menu

@@ -19,10 +19,10 @@ public class Locators {
 	public static String signup_text= "com.awok.store:id/signupTxt";
 	public static String signin_text= "com.awok.store:id/nameTxt";
 	public static String ui_shopping_cart= "new UiSelector().text(\"Shopping Cart\")";
-	public static String ui_my_profile= "new UiSelector().text(\"My Profile\")";
-	public static String ui_my_addresses= "new UiSelector().text(\"My Addresses\")";
-	public static String ui_my_coupons= "new UiSelector().text(\"My Coupons\")";
-	public static String ui_orders_history= "new UiSelector().text(\"Orders History\")";
+	public static String ui_my_profile= "new UiSelector().text(\"Profile\")";
+	public static String ui_my_addresses= "new UiSelector().text(\"Addresses\")";
+	public static String ui_my_coupons= "new UiSelector().text(\"Coupons\")";
+	public static String ui_orders_history= "new UiSelector().text(\"Orders\")";
 	public static String ui_customer_support= "new UiSelector().text(\"Customer Support\")";
 	public static String ui_About_us= "new UiSelector().text(\"About Us\")";
 	public static String ui_privacy_policy="new UiSelector().text(\"Privacy Policy\")";
@@ -61,6 +61,8 @@ public class Locators {
 	//system alert yes/ no
 	public static String alert_yes= "android:id/button1";
 	public static String alert_no= "android:id/button2";
+	//my account page strings
+	public static String my_account="new UiSelector().text(\"My Account\")";
 	
 	// my profile page strings
 	public static String profile_name= "com.awok.store:id/input_name";
