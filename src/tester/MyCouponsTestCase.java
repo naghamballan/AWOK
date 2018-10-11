@@ -52,10 +52,8 @@ public class MyCouponsTestCase {
 		coupon_amount = "-  " + coupon_amount;
 		Helper.console_print(coupon_amount);
 		
-		Helper.open_Hamburger_menu();//open the hamburger menu
-		Helper.sleep();
-		
-		Helper.button_click_ui_id(Locators.ui_shopping_cart);// select shopping cart
+		// open the cart from cart icon in home page
+		Helper.button_click_id(Locators.home_page_cart_icon);
 		Helper.sleep();
 		
 		//go to coupon 

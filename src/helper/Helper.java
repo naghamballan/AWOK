@@ -64,7 +64,7 @@ public class Helper {
 		button_click_id(Locators.id_tutorial_next_button);
 		button_click_id(Locators.id_tutorial_next_button);
 		button_click_id(Locators.id_tutorial_done_button); 		//click on done button
-		Reporter.log("Tutorila Page is browsed",true);
+		Reporter.log("Tutorial Page is browsed",true);
 	}
 	
 	// tutorial page function: skip
@@ -84,11 +84,13 @@ public class Helper {
 		Reporter.log("select country and language",true);
 	}
 	
-	public static void my_account_page()
+	//My Account Section in App Menu
+	public static void my_account_section()
 	{
 		button_click_ui_id(Locators.my_account);
 		Reporter.log("My account page is opened",true);
 	}
+	
 	//set desired language
 	public static void language_setter(String value)
 	{
@@ -147,16 +149,18 @@ public class Helper {
 	}
 	
 	//scroll to function
-	public static void scroll_to_text(String value){
+	public static void scroll_to_text(String value)
+	{
 		
-		//((AppiumDriver)driver).scrollTo(value);
+		((AppiumDriver)driver).scrollTo(value);
 	}
 	
 	//scroll to text using android driver
 	public static void scroll_to_text2(String value)
 	{
-		//driver.scrollTo(value);
+		driver.scrollTo(value);
 	}
+	
 	//click on Hamburger menu
 	public static void open_Hamburger_menu()
 	{

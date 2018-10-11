@@ -36,10 +36,10 @@ public class OrdersHistoryTestCase {
 		//open pending orders
 		tabs.get(0).click();
 		browse_pending_orders();
-//		
-//		//open delivered orders
-//		tabs.get(1).click();
-//		browse_delivered_orders();
+		
+		//open delivered orders
+		tabs.get(1).click();
+		browse_delivered_orders();
 		
 		Helper.sleep();
 	}
@@ -67,11 +67,12 @@ public class OrdersHistoryTestCase {
 		Helper.navigate_back();
 	}
 
-	private static void cancel_pending_order() {
+	private static void cancel_pending_order() throws InterruptedException {
 		
 		//scroll to cancel button
-		Helper.scroll_to_text("CANCEL");
-		
+		//Helper.scroll_to_text("CANCEL");
+		Helper.scroll_to_text2("CANCEL");
+		Helper.sleep();
 		//press the button
 		Helper.button_click_id(Locators.order_history_cancel_button);
 		

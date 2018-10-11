@@ -5,61 +5,41 @@
       <![CDATA[App installed successfully]]>
     </line>
     <line>
-      <![CDATA[Tutorila Page is browsed]]>
+      <![CDATA[Tutorial Page is browsed]]>
     </line>
     <line>
       <![CDATA[select country and language]]>
     </line>
     <line>
-      <![CDATA[All settings test cases are done]]>
+      <![CDATA[My account page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Update profile test case is done]]>
+    </line>
+    <line>
+      <![CDATA[My account page is opened]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39326" started-at="2018-10-10T05:01:34Z" finished-at="2018-10-10T05:02:13Z">
+  <suite name="Default suite" duration-ms="136211" started-at="2018-10-11T05:34:56Z" finished-at="2018-10-11T05:37:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39326" started-at="2018-10-10T05:01:34Z" finished-at="2018-10-10T05:02:13Z">
-      <class name="tester.NEW_Hamburger_menu_selection_">
-        <test-method status="FAIL" signature="test_case_luncher()[pri:0, instance:tester.NEW_Hamburger_menu_selection_@56f4468b]" name="test_case_luncher" duration-ms="39303" started-at="2018-10-10T05:01:34Z" description="Hamburger menu options" finished-at="2018-10-10T05:02:13Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+    <test name="Default test" duration-ms="136211" started-at="2018-10-11T05:34:56Z" finished-at="2018-10-11T05:37:12Z">
+      <class name="tester.HampurgerMenuSelection">
+        <test-method status="FAIL" signature="test_case_luncher()[pri:0, instance:tester.HampurgerMenuSelection@56f4468b]" name="test_case_luncher" duration-ms="136190" started-at="2018-10-11T05:34:56Z" description="Hamburger menu options" finished-at="2018-10-11T05:37:12Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 103 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'AWLP1697600-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_141'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{app=D:\git\AWOK_auto_test.git\src\100918.apk, networkConnectionEnabled=true, warnings={}, autoDismissAlerts=true, databaseEnabled=false, deviceName=192.168.224.101:5555, platform=LINUX, desired={app=D:\git\AWOK_auto_test.git\src\100918.apk, newCommandTimeout=45000, browserName=, autoDismissAlerts=true, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=45000, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
-Session ID: faf02225-1c37-461a-89ac-70dcfba67d7f
-*** Element info: {Using=-android uiautomator, value=new UiSelector().text("Terms of Service")}]]>
+              <![CDATA[Index: 2, Size: 0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 103 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'AWLP1697600-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_141'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{app=D:\git\AWOK_auto_test.git\src\100918.apk, networkConnectionEnabled=true, warnings={}, autoDismissAlerts=true, databaseEnabled=false, deviceName=192.168.224.101:5555, platform=LINUX, desired={app=D:\git\AWOK_auto_test.git\src\100918.apk, newCommandTimeout=45000, browserName=, autoDismissAlerts=true, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=45000, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
-Session ID: faf02225-1c37-461a-89ac-70dcfba67d7f
-*** Element info: {Using=-android uiautomator, value=new UiSelector().text("Terms of Service")}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:365)
-at helper.Helper.button_click_ui_id(Helper.java:131)
-at tester.NEW_Hamburger_menu_selection_.terms_of_services(NEW_Hamburger_menu_selection_.java:171)
-at tester.NEW_Hamburger_menu_selection_.test_case_luncher(NEW_Hamburger_menu_selection_.java:46)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 2, Size: 0
+at java.util.ArrayList.rangeCheck(Unknown Source)
+at java.util.ArrayList.get(Unknown Source)
+at tester.MyAddressesTestCase.addressesListItem(MyAddressesTestCase.java:152)
+at tester.MyAddressesTestCase.select_address_to_update(MyAddressesTestCase.java:139)
+at tester.MyAddressesTestCase.update_address(MyAddressesTestCase.java:109)
+at tester.MyAddressesTestCase.test_case_luncher(MyAddressesTestCase.java:25)
+at tester.HampurgerMenuSelection.Addresses(HampurgerMenuSelection.java:98)
+at tester.HampurgerMenuSelection.test_case_luncher(HampurgerMenuSelection.java:31)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -87,23 +67,29 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
             <line>
               <![CDATA[App installed successfully]]>
             </line>
             <line>
-              <![CDATA[Tutorila Page is browsed]]>
+              <![CDATA[Tutorial Page is browsed]]>
             </line>
             <line>
               <![CDATA[select country and language]]>
             </line>
             <line>
-              <![CDATA[All settings test cases are done]]>
+              <![CDATA[My account page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Update profile test case is done]]>
+            </line>
+            <line>
+              <![CDATA[My account page is opened]]>
             </line>
           </reporter-output>
         </test-method> <!-- test_case_luncher -->
-      </class> <!-- tester.NEW_Hamburger_menu_selection_ -->
+      </class> <!-- tester.HampurgerMenuSelection -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

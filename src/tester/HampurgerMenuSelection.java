@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 import helper.Helper;
 import helper.Locators;
 
-public class NEW_Hamburger_menu_selection_{
+public class HampurgerMenuSelection{
 	
-	@Test(priority=0,description="Hamburger menu options")
+	@Test(priority=0,alwaysRun=true,description="Hamburger menu options")
 	public static void test_case_luncher() throws MalformedURLException, InterruptedException
 	{
 		Helper.app_luncher();
@@ -21,43 +21,38 @@ public class NEW_Hamburger_menu_selection_{
 		
 		Helper.country_language_page();
 		
-		//login_with_valid_credentials();
+		login_with_valid_credentials();
 		
 		/*Test Cases calls*/
-		/*Helper.console_print("Profile test case");
-		Profile();*/
+		Helper.console_print("Profile test case");
+		Profile();
 		
-	/*	Helper.console_print("Addresses test case");
-		Addresses();*/
+		Helper.console_print("Addresses test case");
+		Addresses();
 		
-		/*Helper.console_print("Coupons test case");
-		Coupons();*/
+		Helper.console_print("Coupons test case");
+		Coupons();
 		
-		//Helper.console_print("Orders test case");
-		//Orders();
+		Helper.console_print("Orders test case");
+		Orders();
 		
-		//Helper.console_print("Track Order test case");
-		//Track_Order();
+		Helper.console_print("Track Order test case");
+		Track_Order();
 		
 		Helper.console_print("Setting test case");
 		settings();
 		
 		Helper.console_print("Term of services test case");
 		terms_of_services();
-		
-		/*Helper.console_print("Customer Support test case");
-		customer_support();*/
-		
+
 		Helper.console_print("Privacy policy test case");
-		privacy_policy();
-		
-		/*Helper.console_print("About Us test case");
-		about_us()*/;
+		privacy_policy();		
 		
 	}
 
 	private static void login_with_valid_credentials() throws InterruptedException 
 	{
+		
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
 		Helper.button_click_id(Locators.signin_text);// click on sign up text field
@@ -78,14 +73,13 @@ public class NEW_Hamburger_menu_selection_{
 		Thread.sleep(3000);
 		
 	}
-	
-	
 
 	private static void Profile() throws InterruptedException
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
-		Helper.my_account_page(); //open the my account 
+		
+		Helper.my_account_section(); //open the my account 
 		
 		Helper.sleep();
 		
@@ -98,11 +92,13 @@ public class NEW_Hamburger_menu_selection_{
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
-		Helper.my_account_page(); //open the my account 
+		
+		Helper.my_account_section(); //open the my account 
 		
 		MyAddressesTestCase.test_case_luncher();
 		Helper.sleep();
 		Helper.navigate_back();
+		
 		Reporter.log("Addresses test cases are done", true);
 	}
 
@@ -110,9 +106,12 @@ public class NEW_Hamburger_menu_selection_{
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
-		Helper.my_account_page(); //open the my account 
+		
+		Helper.my_account_section(); //open the my account 
+		
 		OrdersHistoryTestCase.test_case_luncher();
 		Helper.navigate_back();
+		
 		Reporter.log("Orders test cases are done", true);
 	}
 
@@ -120,9 +119,12 @@ public class NEW_Hamburger_menu_selection_{
     {
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
-		Helper.my_account_page(); //open the my account 
+		
+		Helper.my_account_section(); //open the my account 
+		
 		MyCouponsTestCase.test_case_luncher();
 		Helper.navigate_back();
+		
 		Reporter.log("Coupons test cases are done", true);
 	}
     
@@ -130,30 +132,17 @@ public class NEW_Hamburger_menu_selection_{
 	{
 		Helper.open_Hamburger_menu();//open the hamburger menu
 		Helper.sleep();
+		
 		OrdersHistoryTestCase.test_case_luncher();
 		Helper.navigate_back();
+		
 		Reporter.log("All Track Orders test cases are done", true);
 	}
 	   
-	private static void customer_support() throws InterruptedException
-	{
-		Helper.open_Hamburger_menu();//open the hamburger menu
-		Helper.sleep();
-		
-		Helper.button_click_ui_id(Locators.ui_customer_support);// select customer support
-		Helper.sleep();
-		Helper.navigate_back();
-		Reporter.log("All cutomer support test cases are done", true);
-	}
-	
 	private static void settings() throws InterruptedException
 	{
-		
-		
 		Helper.sleep();
-		
 		Helper.open_Hamburger_menu();//open the hamburger menu
-		
 		
 		Helper.button_click_ui_id(Locators.ui_settings);// select settings
 		Helper.sleep();
@@ -173,17 +162,6 @@ public class NEW_Hamburger_menu_selection_{
 		Helper.navigate_back();
 		Reporter.log("All terms of services test cases are done", true);
 	}
-	
-	/*private static void about_us() throws InterruptedException
-	{
-		Helper.open_Hamburger_menu();//open the hamburger menu
-		Helper.sleep();
-
-		Helper.button_click_ui_id(Locators.ui_About_us);// select about_us
-		Helper.sleep();
-		Helper.navigate_back();
-		Reporter.log("All About US test cases are done", true);
-	}*/
 	
 	private static void privacy_policy() throws InterruptedException
 	{

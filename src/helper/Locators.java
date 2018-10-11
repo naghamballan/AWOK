@@ -28,6 +28,7 @@ public class Locators {
 	public static String ui_privacy_policy="new UiSelector().text(\"Privacy Policy\")";
 	public static String ui_settings="new UiSelector().text(\"Settings\")";
 	public static String ui_terms_of_services="new UiSelector().text(\"Terms of Service\")";
+	public static String my_account="new UiSelector().text(\"My Account\")";
 	
 	// Register page strings
 	public static String  reg_user_name ="com.awok.store:id/regPhoneNumberEditText";
@@ -61,8 +62,7 @@ public class Locators {
 	//system alert yes/ no
 	public static String alert_yes= "android:id/button1";
 	public static String alert_no= "android:id/button2";
-	//my account page strings
-	public static String my_account="new UiSelector().text(\"My Account\")";
+	
 	
 	// my profile page strings
 	public static String profile_name= "com.awok.store:id/input_name";
@@ -156,5 +156,6 @@ public class Locators {
 	public static String shopping_cart_coupon_discount_amount ="com.awok.store:id/discount_applied_text_view";
 	public static String shopping_cart_remove_applied_coupon_button ="com.awok.store:id/remove_coupon_btn";
 	
-	
+	// Home Page Strings
+	public static String home_page_cart_icon ="com.awok.store:id/app_cart";
 }
